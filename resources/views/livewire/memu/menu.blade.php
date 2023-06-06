@@ -24,7 +24,7 @@
     <!--Menu Mobile -->
     <div class="hidden mobile-menu">
       <nav class="px-4 py-2">
-        <a href="#" class="block text-white font-bold py-2">Home</a>
+        <a href="#sobrenos" class="block text-white font-bold py-2">Home</a>
         <a href="#" class="block text-white font-bold py-2">Sobre Nós</a>
         <a href="#" class="block text-white font-bold py-2">Parceiros</a>
         <a href="#" class="block text-white font-bold py-2">Contato</a>
