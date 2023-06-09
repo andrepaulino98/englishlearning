@@ -7,15 +7,17 @@ use Livewire\Component;
 class AuthForm extends Component
 {
 
-    public $showLogin = true;
-
-    public function toggleForm()
-    {
-        $this->showLogin = !$this->showLogin;
-    }
+    public $email;
+    public $password;
 
     public function render()
     {
         return view('livewire.auth.auth-form');
     }
+
+    public function login(){
+        return view('login');
+    }
+
+
 }
