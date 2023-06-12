@@ -11,6 +11,17 @@
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Senha</label>
                 <input wire:model="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Digite sua senha">
             </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">
+                    Tipo de Usuário
+                </label>
+                <div class="flex items-center">
+                    <input type="radio" id="estudante" name="tipo-usuario" class="mr-2">
+                    <label class="mr-4" for="estudante">Estudante</label>
+                    <input type="radio" id="professor" name="tipo-usuario" class="mr-2">
+                    <label for="professor">Professor</label>
+                </div>
+            </div>
             <div class="flex items-center justify-between mb-6">
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                     Entrar

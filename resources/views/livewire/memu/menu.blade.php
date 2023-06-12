@@ -11,7 +11,7 @@
       </nav>
       <div class="hidden md:flex md:items-center md:space-x-4">
         <button class="px-4 py-2 bg-red-700 text-white font-bold rounded-lg" wire:click="login">Logar</button>
-        <button class="px-4 py-2 bg-red-700 text-white font-bold rounded-lg">Registrar</button>
+        <button class="px-4 py-2 bg-red-700 text-white font-bold rounded-lg" wire:click="registry">Registrar</button>
       </div>
       <div class="md:hidden">
         <button class="mobile-menu-button">
