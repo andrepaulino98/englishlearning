@@ -18,4 +18,8 @@ class Menu extends Component
     {
         return view('livewire.memu.menu');
     }
+
+    public function login(){
+        return view('login');
+    }
 }

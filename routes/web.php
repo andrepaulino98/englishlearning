@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Auth\AuthForm;
+use App\Http\Livewire\Auth\Menu;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [AuthForm::class, 'login']);
+Route::get('/login', [Menu::class, 'login']);

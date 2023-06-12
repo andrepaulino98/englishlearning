@@ -15,9 +15,7 @@ class AuthForm extends Component
         return view('livewire.auth.auth-form');
     }
 
-    public function login(){
-        return view('login');
-    }
+
 
 
 }

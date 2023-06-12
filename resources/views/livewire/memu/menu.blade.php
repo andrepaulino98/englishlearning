@@ -10,7 +10,7 @@
         <a href="#contato" class="text-white hover:text-gray-200">Contato</a>
       </nav>
       <div class="hidden md:flex md:items-center md:space-x-4">
-        <button class="px-4 py-2 bg-red-700 text-white font-bold rounded-lg">Logar</button>
+        <button class="px-4 py-2 bg-red-700 text-white font-bold rounded-lg" wire:click="login">Logar</button>
         <button class="px-4 py-2 bg-red-700 text-white font-bold rounded-lg">Registrar</button>
       </div>
       <div class="md:hidden">
@@ -30,7 +30,7 @@
         <a href="#contato" class="block text-white font-bold py-2">Contato</a>
       </nav>
       <div class="px-4 py-2">
-        <button class="block w-full bg-red-700 text-white font-bold rounded-lg py-2">Logar</button>
+        <button class="block w-full bg-red-700 text-white font-bold rounded-lg py-2" wire:click="login">Logar</button>
         <button class="block w-full bg-red-700 text-white font-bold rounded-lg py-2 mt-2">Registrar</button>
       </div>
     </div>
