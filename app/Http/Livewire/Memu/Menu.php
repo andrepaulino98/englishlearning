@@ -20,6 +20,10 @@ class Menu extends Component
     }
 
     public function login(){
-        return view('login');
+        return redirect()->to('/login');
+    }
+
+    public function registry(){
+        return redirect()->to('/registry');
     }
 }

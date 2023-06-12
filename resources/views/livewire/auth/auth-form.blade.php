@@ -1,5 +1,5 @@
 <!-- resources/views/livewire/login-form.blade.php -->
-<div class="flex justify-center items-center h-screen bg-unique-image ">
+<div class="flex justify-center items-center h-screen bg-login-image ">
     <div class="bg-white rounded shadow p-8 max-w-sm w-full">
         <h2 class="text-2xl mb-4">Login</h2>
         <form wire:submit.prevent="submit">

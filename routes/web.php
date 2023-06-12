@@ -18,4 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [Menu::class, 'login']);
+Route::get('/login', function(){
+    return view('login');
+});
+
+Route::get('/registry', function(){
+    return view('registry');
+});

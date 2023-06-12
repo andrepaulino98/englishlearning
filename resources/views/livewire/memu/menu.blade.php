@@ -31,7 +31,7 @@
       </nav>
       <div class="px-4 py-2">
         <button class="block w-full bg-red-700 text-white font-bold rounded-lg py-2" wire:click="login">Logar</button>
-        <button class="block w-full bg-red-700 text-white font-bold rounded-lg py-2 mt-2">Registrar</button>
+        <button class="block w-full bg-red-700 text-white font-bold rounded-lg py-2 mt-2" wire:click="registry">Registrar</button>
       </div>
     </div>
   </header>
