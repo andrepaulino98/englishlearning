@@ -7,6 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://use.fontawesome.com/67342282c2.js"></script>
     <title>@yield('titulo')</title>
+
+    <style>
+        .bg-app-image {
+            background-image: url('{{ asset('images/london_transparent.jpg') }}');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     @yield('conteudo')
