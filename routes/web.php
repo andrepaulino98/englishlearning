@@ -25,3 +25,7 @@ Route::get('/login', function(){
 Route::get('/registry', function(){
     return view('registry');
 });
+
+Route::get('/appenglish', function(){
+    return view('appenglish');
+});

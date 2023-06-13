@@ -7,15 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://use.fontawesome.com/67342282c2.js"></script>
     <title>@yield('titulo')</title>
-@livewireStyles
 </head>
-<body class="bg-black font-serif font-light">
-    @livewire('menu.menu')
-    <main>
-
-            @yield('conteudo')
-
-    </main>
-@livewireScripts
+<body>
+    @yield('conteudo')
 </body>
 </html>
