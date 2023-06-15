@@ -17,7 +17,7 @@
         }
     </style>
 </head>
-<body>
+<body >
     @yield('conteudo')
 </body>
 </html>
