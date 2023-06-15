@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Listening extends Model
 {
     use HasFactory;
+
+    protected $fillable = false;
 }

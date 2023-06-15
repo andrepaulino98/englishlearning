@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Speaking extends Model
 {
     use HasFactory;
+
+    protected $fillable = false;
 }
