@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Auth\Menu;
+use App\Http\Controllers\ListeningController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +29,5 @@ Route::get('/registry', function(){
 Route::get('/appenglish', function(){
     return view('appenglish');
 });
+
+Route::get('/listening',[ListeningController::class,'index']);

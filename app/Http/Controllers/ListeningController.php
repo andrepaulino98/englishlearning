@@ -12,7 +12,7 @@ class ListeningController extends Controller
      */
     public function index()
     {
-        //
+        return view('listening.index');
     }
 
     /**
