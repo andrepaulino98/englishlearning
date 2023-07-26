@@ -3,21 +3,18 @@ pipeline {
 
     stages {
         stage('checkout branch') {
-            steps {
-                scripts {
-                    if ( env.BRANCH_NAME == 'develop') {
-                        git checkout -f develop
-                    } else if (env.BRANCH_NAME  == 'homolog') {
-                        git checkout -f homolog
-                    } else {
-                        git checkout -f master
-                    }
-                }
-
-            }
+          when {
+            branch 'master'
+          }
+            steps { echo "master" }
+          when  {
+            branch 'develop'
+          }
+          steps { echo 'develop' }
+          when {
+            branch 'homolog'
+          }
+          steps { echo 'homolog' }
         }
     }
 }
-
-
-
