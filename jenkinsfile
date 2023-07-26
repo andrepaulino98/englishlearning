@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "executando build"
+                npm install
             }
         }
 
@@ -25,7 +25,12 @@ pipeline {
                 branch 'homolog'
             }
             steps {
-               echo 'homolog'
+                powershell '''
+                    cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
+                    git checkout -f homolog
+                    git merge develop
+                    git pull
+                '''
             }
         }
         stage("deploy em producao"){
@@ -33,7 +38,12 @@ pipeline {
                 branch 'master'
         }
             steps {
-                echo "producao"
+                powershell '''
+                    cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
+                    git checkout -f master
+                    git merge homolog
+                    git pull
+                '''
             }
         }
     }
