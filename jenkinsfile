@@ -16,7 +16,7 @@ pipeline {
                echo 'develop'
             }
         }
-        stage('Deploy em homolog') {
+        stage('Atualiza em homolog') {
             when {
                 branch 'homolog'
             }
