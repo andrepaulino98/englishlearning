@@ -19,6 +19,7 @@ pipeline {
                         git init
                         git add remote git@github.com:andrepaulino98/englishlearning.git
                         git fetch
+                        git checkout -f develop
                         git pull
                '''
             }
