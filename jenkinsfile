@@ -1,8 +1,9 @@
-pipeline {
+pipeline{
     agent any
 
-    stages {
+    stages{
         stage('Build') {
+            steps {
             powershell '''
                 npm install
             '''
@@ -47,5 +48,7 @@ pipeline {
                 '''
             }
         }
+    }
 }
+
 
