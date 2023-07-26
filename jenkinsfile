@@ -17,7 +17,7 @@ pipeline {
                         mkdir C:\\\\xampp\\\\htdocs\\\\englishlearning
                         cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
                         git init
-                        git add remote git@github.com:andrepaulino98/englishlearning.git
+                        git remote add git@github.com:andrepaulino98/englishlearning.git
                         git fetch
                         git checkout -f develop
                         git pull
