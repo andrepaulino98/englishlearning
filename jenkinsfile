@@ -1,18 +1,15 @@
 pipeline{
     agent any
 
-    stages {
-        stage('checkout branch'){
-            steps{
-                if(env.BRANCH_NAME == 'develop'){
-                    git ccheckout -f develop
-                }
-                else if(env.BRANCH_NAME == 'homolog'){
-                    git ccheckout -f homolog
-                }
-                else
-                    git ccheckout -f master
-            }
+    stage('checkout branch') {
+    steps {
+        if (env.BRANCH_NAME == 'develop') {
+            git checkout -f develop
+        } else if (env.BRANCH_NAME == 'homolog') {
+            git checkout -f homolog
+        } else {
+            git checkout -f master
         }
     }
+  }
 }
