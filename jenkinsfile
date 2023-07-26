@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
                cd C:\xampp\htdocs\englishlearning
-               git push
+               git pull
             }
         }
         stage('deploy em homolog') {
