@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout branch') {
             steps {
-
+                scripts {
                     if ( env.BRANCH_NAME == 'develop') {
                         git checkout -f develop
                     } else if (env.BRANCH_NAME  == 'homolog') {
@@ -12,6 +12,7 @@ pipeline {
                     } else {
                         git checkout -f master
                     }
+                }
 
             }
         }
