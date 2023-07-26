@@ -1,10 +1,10 @@
 pipeline{
     agent any
 
-    stages{
-        stage("Checkput repositorio"){
+    stages {
+        stage('checkout branch'){
             step{
-               git checkout -f master
+                git checkout -f master
             }
         }
     }
