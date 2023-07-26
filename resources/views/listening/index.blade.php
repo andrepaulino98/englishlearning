@@ -2,5 +2,5 @@
 
 @section('conteudo')
 
-    <p>teste</p>
+
 @endsection
