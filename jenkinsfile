@@ -5,16 +5,19 @@ pipeline {
         stage('checkout branch') {
           when {
             branch 'master'
-          }
             steps { echo "master" }
+          }
+
           when  {
             branch 'develop'
+            steps { echo 'develop' }
           }
-          steps { echo 'develop' }
+
           when {
             branch 'homolog'
+            steps { echo 'homolog' }
           }
-          steps { echo 'homolog' }
+
         }
     }
 }
