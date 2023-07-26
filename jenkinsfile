@@ -3,7 +3,7 @@ pipeline{
 
     stages {
         stage('checkout branch'){
-            step{
+            steps{
                 git checkout -f master
             }
         }
