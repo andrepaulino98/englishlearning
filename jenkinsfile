@@ -3,7 +3,7 @@ pipeline{
 
     stages{
         stage("Checkput repositorio"){
-            steps{
+            step{
                git checkout -f master
             }
         }
