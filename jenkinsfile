@@ -9,7 +9,7 @@ pipeline{
                 } else if (env.BRANCH_NAME == 'homolog') {
                     git checkout -f homolog
                 } else {
-                        git checkout -f master
+                    git checkout -f master
                 }
             }
         }
