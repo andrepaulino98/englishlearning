@@ -2,22 +2,35 @@ pipeline {
     agent any
 
     stages {
-        stage('checkout branch') {
-          when {
-            branch 'master'
-            steps { echo "master" }
-          }
+        stage('Build') {
+            steps {
+                echo "executando build"
+            }
+        }
 
-          when  {
-            branch 'develop'
-            steps { echo 'develop' }
-          }
-
-          when {
-            branch 'homolog'
-            steps { echo 'homolog' }
-          }
-
+        stage('Deploy em desenvolvimento') {
+            when {
+                branch 'develop'
+            }
+            steps {
+               echo 'develop'
+            }
+        }
+        stage('Deploy em homologação') {
+            when {
+                branch 'homolog'
+            }
+            steps {
+               echo 'homolog'
+            }
+        }
+        stage("deploy em produção"){
+            when {
+                branch 'master'
+        }
+            steps {
+                echo "produção"
+            }
         }
     }
 }
