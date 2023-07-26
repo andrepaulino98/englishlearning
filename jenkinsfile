@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
                 powershell '''
-                        mkdir C:\\\\xampp\\\\htdocs\\\\\englishlearning
+                        mkdir C:\\\\xampp\\\\htdocs\\\\englishlearning
                         cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
                         git pull
                '''
