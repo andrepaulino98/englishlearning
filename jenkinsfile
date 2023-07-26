@@ -1,17 +1,32 @@
-pipeline{
+pipeline {
     agent any
 
     stages {
         stage('checkout branch') {
             steps {
-                if (env.BRANCH_NAME == 'develop') {
-                    git checkout -f develop
-                } else if (env.BRANCH_NAME == 'homolog') {
-                    git checkout -f homolog
-                } else {
-                    git checkout -f master
+                script {
+                    // Obtém o nome da branch atual
+                    def branchName = env.BRANCH_NAME
+
+                    // Verifica a branch atual e executa o git checkout correspondente
+                    if (branchName == 'develop') {
+                        gitCheckout('develop')
+                    } else if (branchName == 'homolog') {
+                        gitCheckout('homolog')
+                    } else {
+                        gitCheckout('master')
+                    }
                 }
             }
         }
     }
 }
+
+def gitCheckout(branch) {
+    // Executa o comando git checkout -f <branch>
+    sh "git checkout -f ${branch}"
+}
+
+
+
+
