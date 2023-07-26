@@ -13,10 +13,11 @@ pipeline {
                 branch 'develop'
             }
             steps {
-               echo 'develop'
+               C:\xampp\htdocs\englishlearning
+               git pull
             }
         }
-        stage('Deploy em homolog') {
+        stage('deploy em homolog') {
             when {
                 branch 'homolog'
             }
