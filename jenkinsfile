@@ -13,7 +13,7 @@ pipeline {
                 branch 'develop'
             }
             steps {
-               cd "C:\/xampp\/\htdocs\/englishlearning"
+               cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
                git pull
             }
         }
