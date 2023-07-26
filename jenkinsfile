@@ -16,7 +16,7 @@ pipeline {
                echo 'develop'
             }
         }
-        stage('Deploy em homologação') {
+        stage('Deploy em homolog') {
             when {
                 branch 'homolog'
             }
@@ -24,12 +24,12 @@ pipeline {
                echo 'homolog'
             }
         }
-        stage("deploy em produção"){
+        stage("deploy em producao"){
             when {
                 branch 'master'
         }
             steps {
-                echo "produção"
+                echo "producao"
             }
         }
     }
