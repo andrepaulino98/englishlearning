@@ -1,17 +1,36 @@
-pipeline{
+pipeline {
     agent any
 
     stages {
-        stage('checkout branch'){
-            if(env.BRANCH_NAME == 'develop'){
-                git ccheckout -f develop
+        stage('Build') {
+            steps {
+                echo "executando build"
             }
-            else if(env.BRANCH_NAME == 'homolog'){
-                git ccheckout -f homolog
-             }
-            else {
-                git ccheckout -f master
+        }
+
+        stage('Deploy em desenvolvimento') {
+            when {
+                branch 'develop'
             }
+            steps {
+               echo 'develop'
+            }
+        }
+        stage('Deploy em homolog') {
+            when {
+                branch 'homolog'
+            }
+            steps {
+               echo 'homolog'
+            }
+        }
+        stage("deploy em producao"){
+            when {
+                branch 'master'
+        }
+            steps {
+                echo "producao"
+            }
+        }
     }
-  }
 }
