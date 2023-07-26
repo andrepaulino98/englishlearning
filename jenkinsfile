@@ -22,11 +22,5 @@ pipeline {
     }
 }
 
-def gitCheckout(branch) {
-    // Executa o comando git checkout -f <branch>
-    sh "git checkout -f ${branch}"
-}
-
-
 
 
