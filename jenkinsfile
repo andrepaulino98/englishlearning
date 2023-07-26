@@ -2,32 +2,10 @@ pipeline{
     agent any
 
     stages{
-        stage("A"){
+        stage("Checkput repositorio"){
             steps{
-                echo "========executing A========"
+               git checkout -f master
             }
-            post{
-                always{
-                    echo "========always========"
-                }
-                success{
-                    echo "========A executed successfully========"
-                }
-                failure{
-                    echo "========A execution failed========"
-                }
-            }
-        }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
         }
     }
 }
