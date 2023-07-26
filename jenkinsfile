@@ -4,19 +4,15 @@ pipeline {
     stages {
         stage('checkout branch') {
             steps {
-                script {
-                    // Obtém o nome da branch atual
-                    def branchName = env.BRANCH_NAME
 
-                    // Verifica a branch atual e executa o git checkout correspondente
-                    if (branchName == 'develop') {
+                    if ( env.BRANCH_NAME == 'develop') {
                         git checkout -f develop
-                    } else if (branchName == 'homolog') {
+                    } else if (env.BRANCH_NAME  == 'homolog') {
                         git chechout -f homolog
                     } else {
                         git checkout -f master
                     }
-                }
+
             }
         }
     }
