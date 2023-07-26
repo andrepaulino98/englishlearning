@@ -13,7 +13,8 @@ pipeline {
                 branch 'develop'
             }
             steps {
-               echo 'develop'
+               C:\xampp\htdocs\englishlearning
+               git pull
             }
         }
         stage('deploy em homolog') {
