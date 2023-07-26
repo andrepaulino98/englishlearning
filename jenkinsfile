@@ -10,11 +10,11 @@ pipeline {
 
                     // Verifica a branch atual e executa o git checkout correspondente
                     if (branchName == 'develop') {
-                        gitCheckout('develop')
+                        git checkout -f develop
                     } else if (branchName == 'homolog') {
-                        gitCheckout('homolog')
+                        git chechout -f homolog
                     } else {
-                        gitCheckout('master')
+                        git checkout -f master
                     }
                 }
             }
