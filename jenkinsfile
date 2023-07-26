@@ -3,15 +3,16 @@ pipeline{
 
     stages {
         stage('checkout branch'){
-            if(env.BRANCH_NAME == 'develop'){
-                git ccheckout -f develop
+            steps{
+                if(env.BRANCH_NAME == 'develop'){
+                    git ccheckout -f develop
+                }
+                else if(env.BRANCH_NAME == 'homolog'){
+                    git ccheckout -f homolog
+                }
+                else
+                    git ccheckout -f master
             }
-            else if(env.BRANCH_NAME == 'homolog'){
-                git ccheckout -f homolog
-             }
-            else {
-                git ccheckout -f master
-            }
+        }
     }
-  }
 }
