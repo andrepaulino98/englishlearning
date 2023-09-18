@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListeningController;
+use App\Http\Controllers\ReadingController;
+use App\Http\Controllers\SpeakingController;
 
 /*
 |--------------------------------------------------------------------------
