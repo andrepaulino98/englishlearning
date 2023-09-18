@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('listenings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titulo',256);
+            $table->string('title',256);
             $table->string('url');
             $table->string('description',256);
             $table->timestamps();

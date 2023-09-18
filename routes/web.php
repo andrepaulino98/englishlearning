@@ -30,4 +30,8 @@ Route::get('/appenglish', function(){
     return view('appenglish');
 });
 
-Route::get('/listening',[ListeningController::class,'index']);
+Route::get('/appenglish/listening',[ListeningController::class,'index']);
+Route::get('/appenglish/readging',[ReadingController::class,'index']);
+Route::get('/appenglish/speaking',[SpeakingController::class,'index']);
+
+
