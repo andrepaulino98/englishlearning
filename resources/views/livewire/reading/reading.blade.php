@@ -3,7 +3,7 @@
 @section('conteudo')
 <header class="bg-indigo-900 text-white py-4">
     <div class="container mx-auto px-4 flex items-center justify-between">
-        <h1 class="text-2xl font-bold">English Learning</h1>
+        <h1 class="text-2xl font-bold">English Reading</h1>
         <div class="text-right">
             <div class="text-white text-sm">Bem-vindo, Andre Paulino</div>
             <div class="mt-2">
