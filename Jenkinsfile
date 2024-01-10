@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Lista Pods') {
+        stage('Lista de Pods') {
             steps {
                 sh 'kubectl get pods -A'
             }
