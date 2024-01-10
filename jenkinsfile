@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-                sh 'docker image build -t englishlearning:latest -f .'
+                sh 'docker image build -t englishlearning:latest .'
             }
         }
         stage('Tag Image'){
