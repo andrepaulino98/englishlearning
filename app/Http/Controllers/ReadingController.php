@@ -12,7 +12,7 @@ class ReadingController extends Controller
      */
     public function index()
     {
-        //
+        return view('reading.index');
     }
 
     /**

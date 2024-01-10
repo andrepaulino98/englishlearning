@@ -1,10 +1,12 @@
-pipeline {
+pipeline{
     agent any
 
-    stages {
+    stages{
         stage('Build') {
             steps {
-                echo "executando build"
+            powershell '''
+                npm install
+            '''
             }
         }
 
@@ -13,8 +15,11 @@ pipeline {
                 branch 'develop'
             }
             steps {
-               C:\xampp\htdocs\englishlearning
-               git pull
+                powershell '''
+                        cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
+                        git checkout -f develop
+                        git pull
+               '''
             }
         }
         stage('deploy em homolog') {
@@ -22,7 +27,12 @@ pipeline {
                 branch 'homolog'
             }
             steps {
-               echo 'homolog'
+                powershell '''
+                    cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
+                    git checkout -f homolog
+                    git merge develop
+                    git pull
+                '''
             }
         }
         stage("deploy em producao"){
@@ -30,8 +40,15 @@ pipeline {
                 branch 'master'
         }
             steps {
-                echo "producao"
+                powershell '''
+                    cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
+                    git checkout -f master
+                    git merge homolog
+                    git pull
+                '''
             }
         }
     }
 }
+
+

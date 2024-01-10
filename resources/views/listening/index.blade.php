@@ -1,6 +1,1 @@
-@extends('layouts.apptelas')
-
-@section('conteudo')
-
-
-@endsection
+@livewire('listening.listening')
