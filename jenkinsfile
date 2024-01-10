@@ -1,54 +1,10 @@
-pipeline{
+pipeline {
     agent any
-
-    stages{
-        stage('Build') {
+    stages {
+        stage('Lista de Pods') {
             steps {
-            powershell '''
-                npm install
-            '''
-            }
-        }
-
-        stage('Deploy em desenvolvimento') {
-            when {
-                branch 'develop'
-            }
-            steps {
-                powershell '''
-                        cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
-                        git checkout -f develop
-                        git pull
-               '''
-            }
-        }
-        stage('deploy em homolog') {
-            when {
-                branch 'homolog'
-            }
-            steps {
-                powershell '''
-                    cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
-                    git checkout -f homolog
-                    git merge develop
-                    git pull
-                '''
-            }
-        }
-        stage("deploy em producao"){
-            when {
-                branch 'master'
-        }
-            steps {
-                powershell '''
-                    cd "C:\\\\xampp\\\\htdocs\\\\englishlearning"
-                    git checkout -f master
-                    git merge homolog
-                    git pull
-                '''
+                sh 'kubectl get pods -A'
             }
         }
     }
 }
-
-
