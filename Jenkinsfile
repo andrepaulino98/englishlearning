@@ -11,5 +11,10 @@ pipeline {
                 sh 'docker tag englishlearning:latest andrepaulino/englishlearning:latest'
             }
         }
+        stage('Subindo imagem para o repositório DockerHub'){
+            steps{
+                sh 'docker pull englishlearning:latest'
+            }
+        }
     }
 }
