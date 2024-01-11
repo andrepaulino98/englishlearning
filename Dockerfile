@@ -53,6 +53,6 @@ USER $user
 RUN cd /var/www/englishlearning/
 
 #Rodar composer install
-RUN composer update /var/www/englishlearning/
+RUN composer require /var/www/englishlearning/
 
 
