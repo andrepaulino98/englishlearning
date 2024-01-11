@@ -53,6 +53,6 @@ USER $user
 RUN cd /var/www/englishlearning/
 
 #Rodar composer install
-RUN composer install
+RUN composer install /var/www/englishlearning/
 
 
