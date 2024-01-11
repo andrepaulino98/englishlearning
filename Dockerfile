@@ -46,18 +46,8 @@ COPY . /var/www/englishlearning/
 #Change permisssion
 RUN chown -R laravel:laravel /var/www/englishlearning/
 
-#copiar script
-
-COPY ./script/app_composer.sh /home/laravel
-
-#change permission
-
-RUN chmod 755 /home/laravel/app_composer.sh
-
-#Change user
 USER $user
 
-#RUN composer install
-ENTRYPOINT ["./home/laravel/app_composer.sh"]
+RUN composer install .englishlearning/
 
 
