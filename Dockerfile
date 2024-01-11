@@ -48,6 +48,7 @@ RUN chown -R laravel:laravel /var/www/englishlearning/
 
 USER $user
 
-RUN composer install .englishlearning/
+RUN cd englishlearning
 
+RUN composer install 
 
