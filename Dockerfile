@@ -46,8 +46,6 @@ COPY . /var/www/englishlearning/
 #Change permisssion
 RUN chown -R laravel:laravel /var/www/englishlearning/
 
-USER $user
-
 RUN cd /var/www/englishlearning/
 
 RUN composer install 
