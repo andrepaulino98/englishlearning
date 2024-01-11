@@ -53,6 +53,6 @@ USER $user
 RUN cd /var/www/englishlearning
 
 #RUN composer install
-RUN composer install /var/wwww/englishlearning/
+ENTRYPOINT ["composer install /var/www/englishlearning/"]
 
 
