@@ -46,13 +46,13 @@ COPY . /var/www/englishlearning/
 #Change permisssion
 RUN chown -R laravel:laravel /var/www/englishlearning/
 
-#Entrar no diretório da aplicação
-RUN su -c cd /var/www/englishlearning -s /bin/bash laravel
-
-#RUN composer install
-ENTRYPOINT [ "su -c composer install /var/wwww/englishlearning -s /bin/bash laravel" ]
-
-
 #Change user
 USER $user
+
+#Entrar no diretório da aplicação
+RUN cd /var/www/englishlearning
+
+#RUN composer install
+ENTRYPOINT [ "composer install /var/wwww/englishlearning" ]
+
 
