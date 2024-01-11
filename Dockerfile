@@ -41,4 +41,8 @@ RUN composer create-project --prefer-dist laravel/laravel englishlearning
 
 #Copy Files
 
-COPY . $WORKDIR/englishlearning/
+COPY . /var/www/englishlearning/
+
+#Instalr as dependências
+RUN cd /var/www/englishlearning/
+RUN composer install
