@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Subindo imagem para o repositório DockerHub'){
             steps{
-                sh 'docker pull andrepaulino/englishlearning:latest'
+                sh 'docker push andrepaulino/englishlearning:latest'
             }
         }
     }
