@@ -42,3 +42,14 @@ RUN composer create-project --prefer-dist laravel/laravel englishlearning
 #Copy Files
 
 COPY . /var/www/englishlearning/
+
+#Change permisssion
+RUN chown -R laravel:laravel /var/www/englishlearning/
+
+#Acessando diretorio da aplicação
+RUN cd /var/www/englishlearning/
+
+#Rodar composer install
+RUN composer install
+
+
