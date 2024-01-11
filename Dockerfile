@@ -47,10 +47,10 @@ COPY . /var/www/englishlearning/
 RUN chown -R laravel:laravel /var/www/englishlearning/
 
 #Entrar no diretório da aplicação
-RUN sudo -c cd /var/www/englishlearning -s /bin/bash laravel
+RUN su -c cd /var/www/englishlearning -s /bin/bash laravel
 
 #RUN composer install
-ENTRYPOINT [ "sudo -c composer install /var/wwww/englishlearning -s /bin/bash laravel" ]
+ENTRYPOINT [ "su -c composer install /var/wwww/englishlearning -s /bin/bash laravel" ]
 
 
 #Change user
