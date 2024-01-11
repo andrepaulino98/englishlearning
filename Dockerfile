@@ -49,10 +49,3 @@ RUN chown -R laravel:laravel /var/www/englishlearning/
 #Change user
 USER $user
 
-#Acessando diretorio da aplicação
-RUN cd /var/www/englishlearning/
-
-#Rodar composer install
-RUN composer require --update-no-dev /var/www/englishlearning/
-
-
