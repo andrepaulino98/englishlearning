@@ -46,6 +46,9 @@ COPY . /var/www/englishlearning/
 #Change permisssion
 RUN chown -R laravel:laravel /var/www/englishlearning/
 
+#Change user
+USER $user
+
 #Acessando diretorio da aplicação
 RUN cd /var/www/englishlearning/
 
