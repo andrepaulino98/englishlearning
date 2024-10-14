@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-               bat 'docker build -t englishlearning:${BuildNumber} .'
+               bat 'docker build -t englishlearning:${BUILD_NUMBER} .'
             }
         }
         stage('Tag Image'){
