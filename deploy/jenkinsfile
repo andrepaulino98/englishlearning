@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Tag Image'){
             steps {
-                sh 'docker tag englishlearning:$(git rev-parse --short HEAD)  andrepaulino/englishlearning:$(git rev-parse --short HEAD)'
+                sh 'docker tag englishlearning:${BUILD_NUMBER}  andrepaulino/englishlearning:${BUILD_NUMBER}'
             }
         }
         stage('Subindo imagem para o repositório DockerHub'){
             steps{
-                sh 'docker push andrepaulino/englishlearning:$(git rev-parse --short HEAD)'
+                sh 'docker push andrepaulino/englishlearning:${BUILD_NUMBER}'
             }
         }
     }
