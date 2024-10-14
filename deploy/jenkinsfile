@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-               bat 'docker build -t englishlearning:${BUILD_NUMBER} .'
+               sh 'docker build -t englishlearning:${BUILD_NUMBER} .'
             }
         }
         stage('Tag Image'){
             steps {
-                bat 'docker tag englishlearning:$(git rev-parse --short HEAD)  andrepaulino/englishlearning:$(git rev-parse --short HEAD)'
+                sh 'docker tag englishlearning:$(git rev-parse --short HEAD)  andrepaulino/englishlearning:$(git rev-parse --short HEAD)'
             }
         }
         stage('Subindo imagem para o repositório DockerHub'){
             steps{
-                bat 'docker push andrepaulino/englishlearning:$(git rev-parse --short HEAD)'
+                sh 'docker push andrepaulino/englishlearning:$(git rev-parse --short HEAD)'
             }
         }
     }
