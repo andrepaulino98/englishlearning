@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-               bat 'docker image build -t englishlearning:$(git rev-parse --short HEAD) .'
+               bat 'docker build -t englishlearning:$(git rev-parse --short HEAD) .'
             }
         }
         stage('Tag Image'){
